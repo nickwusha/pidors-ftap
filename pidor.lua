@@ -340,6 +340,7 @@ desttab.killbutton.MouseButton1Click:Connect(function()
 	if jpgui then
 		jpgui:Destroy()
 	end
+	rs = nil; 
 	menu.maingui:Destroy(); script:Destroy(); script.Enabled = false
 end)
 
@@ -608,7 +609,7 @@ workspace.ChildAdded:Connect(function(newchild)
 end)
 
 rs.RenderStepped:Connect(function()
-
+	
 	if toggles.grab ~= nil then
 
 		if toggles.poisongrab == true then
